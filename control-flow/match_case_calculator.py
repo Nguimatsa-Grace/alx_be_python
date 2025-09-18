@@ -11,30 +11,32 @@ def get_user_input():
 
 def perform_calculation(num1, num2, operation):
     """Performs the calculation based on the selected operation."""
-    result = None
-    message = ""
-
     match operation:
         case '+':
             result = num1 + num2
-            message = f"The result is {result}."
+            print(f"The result is {result}.")
         case '-':
             result = num1 - num2
-            message = f"The result is {result}."
+            print(f"The result is {result}.")
         case '*':
             result = num1 * num2
-            message = f"The result is {result}."
+            print(f"The result is {result}.")
         case '/':
             # Handle division by zero gracefully
             if num2 != 0:
                 result = num1 / num2
-                message = f"The result is {result}."
+                print(f"The result is {result}.")
             else:
-                message = "Cannot divide by zero."
+                print("Cannot divide by zero.")
         case _:
             # Handle unexpected operation input
-            message = "Invalid operation. Please choose from +, -, *, /."
+            print("Invalid operation. Please choose from +, -, *, /.")
 
-    print(message)
+# Main part of the script
+if __name__ == "__main__":
+    n1, n2, op = get_user_input()
+    if n1 is not None and n2 is not None and op is not None:
+        perform_calculation(n1, n2, op)
+
 
 
