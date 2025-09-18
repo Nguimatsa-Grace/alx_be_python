@@ -22,17 +22,18 @@ match priority:
         exit()
 
 # 3. Add a time-sensitive clause if applicable
-if time_bound.lower() == 'yes':
+if time_bound == 'yes':
     reminder += " that requires immediate attention today!"
 else:
     # Add a note for non-time-bound tasks, ensuring the format is correct
-    if priority.lower() == 'low':
+    if priority == 'low' or priority == 'Low':
         reminder = f"Note: {reminder}. Consider completing it when you have free time."
     else:
         # For non-time-bound, non-low priority tasks, add a general completion note.
         reminder += ". Consider completing it soon."
 
 # 4. Print the final customized reminder
-print("\nReminder:", reminder)
+print("Reminder:", reminder)
+
 
 
