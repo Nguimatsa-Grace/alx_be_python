@@ -37,8 +37,4 @@ def perform_calculation(num1, num2, operation):
 
     print(message)
 
-# Main part of the script
-if __name__ == "__main__":
-    n1, n2, op = get_user_input()
-    if n1 is not None and n2 is not None and op is not None:
-        perform_calculation(n1, n2, op)
+
